@@ -25,7 +25,6 @@ const customStyles = {
         // width: '50%',
         // height: '50%'
     }
-
 };
 
 class Resultmodal extends React.Component<Props, StateProps> {

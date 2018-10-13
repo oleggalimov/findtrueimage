@@ -84,7 +84,6 @@ class App extends React.Component<{}, { isOpen: boolean }> {
         );
     }
 }
-
 ReactDOM.render(
     <App />,
     document.getElementById('App')

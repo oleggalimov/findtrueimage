@@ -2,7 +2,6 @@ import React from "react";
 import { Table, Button, Row, Container, Col, Form, FormGroup, Label, Input } from "reactstrap";
 import { v1 } from 'uuid'
 import axios from 'axios'
-import Footer from "./Footer";
 const Loader = require("react-loader-spinner").default
 
 export default class Createdictionary extends React.Component<

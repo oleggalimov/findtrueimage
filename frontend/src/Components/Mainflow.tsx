@@ -22,7 +22,6 @@ export default class Mainflow extends React.Component<{store:any},{}> {
                         <Result />
                     </div>
                 </Provider>
-
         );
     };
 }

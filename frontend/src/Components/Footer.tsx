@@ -34,16 +34,16 @@ export default class Footer extends React.Component<{},{isOpen:boolean}> {
     let element = <BrowserRouter>
      <div>
     <Navbar color="light" light expand="md">
-      <NavbarBrand href={`${contextRoot}`}>Главная</NavbarBrand>
+      <NavbarBrand href='/'>Главная</NavbarBrand>
       <NavbarToggler onClick={this.toggle} />
       <Collapse isOpen={this.state.isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href={`${contextRoot}createdictionary`}>Создать словарь</NavLink>
+            <NavLink href='/createdictionary'>Создать словарь</NavLink>
           </NavItem>
           <NavItem>
             <Link to='/addwords'>Добавить слова</Link>
-            <NavLink href={`${contextRoot}remwords`}>Удалить слова</NavLink>
+            <NavLink href='/remwords'>Удалить слова</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
