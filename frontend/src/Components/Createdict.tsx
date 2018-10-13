@@ -22,7 +22,7 @@ export default class Createdictionary extends React.Component<
         //создаем словарь
         try {
             let response = await axios(
-                `http://localhost:8080/findtrueimage/createdictionary?id=${uuid}`
+                `/createdictionary?id=${uuid}`
             );
             if (response.status==200 && response.data!="fail" && response.data!="error") {
                 this.setState(

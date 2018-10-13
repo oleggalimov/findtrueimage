@@ -46239,7 +46239,7 @@ var Page404_1 = __importDefault(__webpack_require__(/*! ./Components/Page404 */ 
 var Addwords_1 = __importDefault(__webpack_require__(/*! ./Components/Addwords */ "./src/Components/Addwords.tsx"));
 var Createdict_1 = __importDefault(__webpack_require__(/*! ./Components/Createdict */ "./src/Components/Createdict.tsx"));
 var Removewords_1 = __importDefault(__webpack_require__(/*! ./Components/Removewords */ "./src/Components/Removewords.tsx"));
-var Context_1 = __importDefault(__webpack_require__(/*! ./utils/Context */ "./src/utils/Context.tsx"));
+// import contextRoot from './utils/Context'
 var Navbar_1 = __importDefault(__webpack_require__(/*! reactstrap/lib/Navbar */ "./node_modules/reactstrap/lib/Navbar.js"));
 var NavbarBrand_1 = __importDefault(__webpack_require__(/*! reactstrap/lib/NavbarBrand */ "./node_modules/reactstrap/lib/NavbarBrand.js"));
 var NavbarToggler_1 = __importDefault(__webpack_require__(/*! reactstrap/lib/NavbarToggler */ "./node_modules/reactstrap/lib/NavbarToggler.js"));
@@ -46272,7 +46272,7 @@ var App = /** @class */ (function (_super) {
         return (React.createElement(react_router_dom_1.BrowserRouter, null,
             React.createElement("div", null,
                 React.createElement(Navbar_1.default, { color: "light", light: true },
-                    React.createElement(NavbarBrand_1.default, { href: "" + Context_1.default }, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"),
+                    React.createElement(NavbarBrand_1.default, { href: '/' }, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"),
                     React.createElement(NavbarToggler_1.default, { onClick: this.toggle }),
                     React.createElement(Collapse_1.default, { isOpen: this.state.isOpen, navbar: true },
                         React.createElement(Nav_1.default, { className: "ml-auto", navbar: true },
@@ -46283,11 +46283,11 @@ var App = /** @class */ (function (_super) {
                             React.createElement(NavItem_1.default, null,
                                 React.createElement(react_router_dom_1.NavLink, { to: '/remwords' }, "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043B\u043E\u0432\u0430"))))),
                 React.createElement(react_router_1.Switch, null,
-                    React.createElement(react_router_1.Route, { path: Context_1.default + "/", exact: true, component: Home }),
+                    React.createElement(react_router_1.Route, { path: '/', exact: true, component: Home }),
                     React.createElement(react_router_1.Route, { path: '/createdictionary', component: Createdict_1.default }),
-                    React.createElement(react_router_1.Route, { path: "/addwords", component: Addwords_1.default }),
-                    React.createElement(react_router_1.Route, { path: "/remwords", component: Removewords_1.default }),
-                    React.createElement(react_router_1.Route, { path: "/flow", render: function () { return React.createElement(Mainflow_1.default, { store: store }); } }),
+                    React.createElement(react_router_1.Route, { path: '/addwords', component: Addwords_1.default }),
+                    React.createElement(react_router_1.Route, { path: '/remwords', component: Removewords_1.default }),
+                    React.createElement(react_router_1.Route, { path: '/flow', render: function () { return React.createElement(Mainflow_1.default, { store: store }); } }),
                     React.createElement(react_router_1.Route, { render: function (props) { return React.createElement(Page404_1.default, null); } })))));
     };
     return App;
@@ -46635,7 +46635,7 @@ var Createdictionary = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, axios_1.default("http://localhost:8080/findtrueimage/createdictionary?id=" + uuid)];
+                        return [4 /*yield*/, axios_1.default("/createdictionary?id=" + uuid)];
                     case 2:
                         response = _a.sent();
                         if (response.status == 200 && response.data != "fail" && response.data != "error") {
@@ -48179,22 +48179,6 @@ exports.default = (function () {
     }));
     return store;
 });
-
-
-/***/ }),
-
-/***/ "./src/utils/Context.tsx":
-/*!*******************************!*\
-  !*** ./src/utils/Context.tsx ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var contextRoot = '/findtrueimage/';
-exports.default = contextRoot;
 
 
 /***/ }),

@@ -10,7 +10,7 @@ import Page404 from './Components/Page404';
 import Addwords from './Components/Addwords';
 import Createdict from './Components/Createdict';
 import Removewords from './Components/Removewords';
-import contextRoot from './utils/Context'
+// import contextRoot from './utils/Context'
 import Navbar from 'reactstrap/lib/Navbar';
 import NavbarBrand from 'reactstrap/lib/NavbarBrand';
 import NavbarToggler from 'reactstrap/lib/NavbarToggler';
@@ -49,7 +49,7 @@ class App extends React.Component<{}, { isOpen: boolean }> {
             <BrowserRouter>
                 <div>
                     <Navbar color="light" light >
-                        <NavbarBrand href={`${contextRoot}`}>Главная</NavbarBrand>
+                        <NavbarBrand href='/'>Главная</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
@@ -69,11 +69,11 @@ class App extends React.Component<{}, { isOpen: boolean }> {
                     <Switch>
                         {/* <Route path={`${Context.contextRoot}`} component={App} exact={true}/> */}
                         {/* <Route path="/" component={App} exact={true}/> */}
-                        <Route path={`${contextRoot}/`} exact={true} component={Home} />
+                        <Route path='/' exact={true} component={Home} />
                         <Route path='/createdictionary' component={Createdict} />
-                        <Route path={`/addwords`} component={Addwords} />
-                        <Route path={`/remwords`} component={Removewords} />
-                        <Route path={`/flow`} render={() => <Mainflow store={store} />} />
+                        <Route path='/addwords' component={Addwords} />
+                        <Route path='/remwords' component={Removewords} />
+                        <Route path='/flow' render={() => <Mainflow store={store} />} />
                         <Route render={(props) => <Page404 />} />
                     </Switch>
                 </div>
