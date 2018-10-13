@@ -46814,7 +46814,7 @@ var Identificationmodal = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 6, , 7]);
-                        return [4 /*yield*/, fetch('/dictionary?id=${this.state.dictionary_id}&get=false')];
+                        return [4 /*yield*/, fetch("/dictionary?id=" + this.state.dictionary_id + "&get=false")];
                     case 2:
                         response = _a.sent();
                         if (!!response.ok) return [3 /*break*/, 3];
