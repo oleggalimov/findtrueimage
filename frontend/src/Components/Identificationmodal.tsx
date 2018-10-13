@@ -55,7 +55,7 @@ class Identificationmodal extends React.Component<Props, StateProps> {
   async findDict() {
     if (this.state.count) {
       try {
-        const response = await fetch('/findtrueimage/dictionary?id=${this.state.dictionary_id}&get=false');
+        const response = await fetch('/dictionary?id=${this.state.dictionary_id}&get=false');
         if (!response.ok) {
           throw Error(response.statusText);
         } else {

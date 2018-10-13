@@ -37,7 +37,7 @@ export default class Removewords extends React.Component<
                 //получаем словарь
                 try {
                     let response = await axios(
-                        `/findtrueimage/dictionary?id=${id}&get=true`
+                        `/dictionary?id=${id}&get=true`
                     );
                     if (response.status == 200) {
                         if (response.data != 'fail' && response.data != 'error') {
@@ -91,7 +91,7 @@ export default class Removewords extends React.Component<
             });
             try {
                 let response = await axios.post(
-                    `/findtrueimage/updatedictionary`,
+                    `/updatedictionary`,
                     {
                         id:this.state.dictID,
                         words:this.state.words

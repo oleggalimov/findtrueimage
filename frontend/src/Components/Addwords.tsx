@@ -34,7 +34,7 @@ export default class Addwords extends React.Component<
                 //получаем словарь
                 try {
                     let response = await axios(
-                        `/findtrueimage/dictionary?id=${id}&get=true`
+                        `/dictionary?id=${id}&get=true`
                     );
                     if (response.status == 200) {
                         if (response.data != 'fail' && response.data != 'error') {
@@ -93,7 +93,7 @@ export default class Addwords extends React.Component<
                         formData.append('word', this.state.tempWord);
                         formData.append('dictid', this.state.dictID);
                         let response = await axios.post(
-                            `/findtrueimage/addwordtodictionary`,
+                            `/addwordtodictionary`,
                             formData
                         );
                         if (response.status == 200) {

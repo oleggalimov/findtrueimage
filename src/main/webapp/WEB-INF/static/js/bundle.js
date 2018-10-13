@@ -46390,7 +46390,7 @@ var Addwords = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, axios_1.default("/findtrueimage/dictionary?id=" + id + "&get=true")];
+                        return [4 /*yield*/, axios_1.default("/dictionary?id=" + id + "&get=true")];
                     case 2:
                         response = _a.sent();
                         if (response.status == 200) {
@@ -46471,7 +46471,7 @@ var Addwords = /** @class */ (function (_super) {
                         formData.append('file', this.state.tempFile);
                         formData.append('word', this.state.tempWord);
                         formData.append('dictid', this.state.dictID);
-                        return [4 /*yield*/, axios_1.default.post("/findtrueimage/addwordtodictionary", formData)];
+                        return [4 /*yield*/, axios_1.default.post("/addwordtodictionary", formData)];
                     case 5:
                         response = _b.sent();
                         if (response.status == 200) {
@@ -46814,7 +46814,7 @@ var Identificationmodal = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 6, , 7]);
-                        return [4 /*yield*/, fetch('/findtrueimage/dictionary?id=${this.state.dictionary_id}&get=false')];
+                        return [4 /*yield*/, fetch('/dictionary?id=${this.state.dictionary_id}&get=false')];
                     case 2:
                         response = _a.sent();
                         if (!!response.ok) return [3 /*break*/, 3];
@@ -46983,7 +46983,7 @@ var Image = /** @class */ (function (_super) {
         var _this = _super.call(this, props) || this;
         _this.onClickImage = function () {
             // let url=`https://translate.google.com.vn/translate_tts?ie=UTF-8&q=${this.props.word}&tl=en&client=tw-ob`;
-            var url = "/findtrueimage/audio?word=" + _this.props.word;
+            var url = "/audio?word=" + _this.props.word;
             var audio = new Audio(url);
             audio.play();
             _this.props.Showanswer(_this.props.answer);
@@ -47001,7 +47001,7 @@ var Image = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, axios_1.default("/findtrueimage/image?word=" + this.props.word)];
+                        return [4 /*yield*/, axios_1.default("/image?word=" + this.props.word)];
                     case 1:
                         response = _a.sent();
                         this.setState({
@@ -47332,7 +47332,7 @@ var Removewords = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, axios_1.default("/findtrueimage/dictionary?id=" + id + "&get=true")];
+                        return [4 /*yield*/, axios_1.default("/dictionary?id=" + id + "&get=true")];
                     case 2:
                         response = _a.sent();
                         if (response.status == 200) {
@@ -47395,7 +47395,7 @@ var Removewords = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, axios_1.default.post("/findtrueimage/updatedictionary", {
+                        return [4 /*yield*/, axios_1.default.post("/updatedictionary", {
                                 id: this.state.dictID,
                                 words: this.state.words
                             })];
@@ -47718,7 +47718,7 @@ var Taskmodal = /** @class */ (function (_super) {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 6, , 7]);
-                        return [4 /*yield*/, fetch("/findtrueimage/dictionary?id=" + this.props.dict_id + "&get=false")];
+                        return [4 /*yield*/, fetch("/dictionary?id=" + this.props.dict_id + "&get=false")];
                     case 2:
                         response = _a.sent();
                         if (!!response.ok) return [3 /*break*/, 3];
@@ -47740,7 +47740,7 @@ var Taskmodal = /** @class */ (function (_super) {
                         _a.label = 8;
                     case 8:
                         _a.trys.push([8, 13, , 14]);
-                        return [4 /*yield*/, fetch("/findtrueimage/imageslist?word=" + this.props.word + "&counter=" + this.props.image_counter)];
+                        return [4 /*yield*/, fetch("/imageslist?word=" + this.props.word + "&counter=" + this.props.image_counter)];
                     case 9:
                         response = _a.sent();
                         if (!!response.ok) return [3 /*break*/, 10];

@@ -85,7 +85,7 @@ class Taskmodal extends React.Component<Props, { modalIsOpen: boolean, error:boo
     let get_word = false;
     try {
 
-      const response = await fetch(`/findtrueimage/dictionary?id=${this.props.dict_id}&get=false`);
+      const response = await fetch(`/dictionary?id=${this.props.dict_id}&get=false`);
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
@@ -102,7 +102,7 @@ class Taskmodal extends React.Component<Props, { modalIsOpen: boolean, error:boo
     }
     if (get_word) {
     try {
-      const response = await fetch(`/findtrueimage/imageslist?word=${this.props.word}&counter=${this.props.image_counter}`);
+      const response = await fetch(`/imageslist?word=${this.props.word}&counter=${this.props.image_counter}`);
       if (!response.ok) {
         throw Error(response.statusText);
       } else {

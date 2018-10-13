@@ -16,7 +16,7 @@ export class Image extends React.Component<Props, {loaded:boolean,  imageData:st
     async componentDidMount() {
         try {
             let response = await axios(
-                    `/findtrueimage/image?word=${this.props.word}`
+                    `/image?word=${this.props.word}`
                 );
             this.setState(
                 {
@@ -33,7 +33,7 @@ export class Image extends React.Component<Props, {loaded:boolean,  imageData:st
     onClickImage=()=>{
         
         // let url=`https://translate.google.com.vn/translate_tts?ie=UTF-8&q=${this.props.word}&tl=en&client=tw-ob`;
-        let url=`/findtrueimage/audio?word=${this.props.word}`;
+        let url=`/audio?word=${this.props.word}`;
         let audio = new Audio(url);
         audio.play();
         this.props.Showanswer(this.props.answer);
